@@ -3,7 +3,7 @@ package HomeWork11;
 
 import  java.util.Objects;
 
-public class Amphibians extends Animals {
+public class Amphibians extends Animals  {
 
     private String livingEnvironment;
 

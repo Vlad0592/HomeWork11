@@ -1,12 +1,13 @@
 package HomeWork11;
 
+
 import java.util.Objects;
 
-public class Herbivores extends Mammals  {
+public  class Predators extends Mammals  {
     private String typeFood;
 
-    public Herbivores(String name,int age,  String livingEnvironment, int speed, String typeFood) {
-        super(name, age, livingEnvironment, speed);
+    public Predators(String name, String livingEnvironment, int speed, String typeFood) {
+        super(name, livingEnvironment, speed);
         if (typeFood != null && !typeFood.isBlank()) {
             this.typeFood = typeFood;
         } else {
@@ -14,9 +15,9 @@ public class Herbivores extends Mammals  {
         }
     }
 
-    public Herbivores(String name, String livingEnvironment, int speed, String typeFood) {
-        super(name, livingEnvironment, speed);
-        if (typeFood != null  && !typeFood.isBlank()) {
+    public Predators(String name, int age, String livingEnvironment, int speed, String typeFood) {
+        super(name, age, livingEnvironment, speed);
+        if (typeFood != null && !typeFood.isBlank()) {
             this.typeFood = typeFood;
         } else {
             this.typeFood = "No Data";
@@ -28,26 +29,25 @@ public class Herbivores extends Mammals  {
     }
 
     public void setTypeFood(String typeFood) {
-        if (typeFood != null && !typeFood.isBlank()) {
+        if (typeFood != null && !typeFood.isEmpty() && !typeFood.isBlank()) {
             this.typeFood = typeFood;
         } else {
             this.typeFood = "Растительность";
         }
     }
 
-    public void graze() {
-        //пастись
-        System.out.println("Пасусь на травке");
+    public void hunting() {
+        System.out.println("Охочусь на добычу");
     }
 
     @Override
     public void eat() {
-        System.out.println("Ем тавку");
+        System.out.println("Ем мясо и плоть");
     }
 
     @Override
     public void go() {
-        System.out.println("Хожу по лугу");
+        System.out.println("Я невидим перед прыжком");
     }
 
     @Override
@@ -55,8 +55,8 @@ public class Herbivores extends Mammals  {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Herbivores that = (Herbivores) o;
-        return typeFood.equals(that.typeFood);
+        Predators predators = (Predators) o;
+        return typeFood.equals(predators.typeFood);
     }
 
     @Override
@@ -66,8 +66,9 @@ public class Herbivores extends Mammals  {
 
     @Override
     public String toString() {
-        return "Herbivores{" +
+        return "Predators{" +
                 "typeFood='" + typeFood + '\'' +
                 '}';
     }
 }
+

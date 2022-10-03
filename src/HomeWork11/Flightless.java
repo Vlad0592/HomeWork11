@@ -4,7 +4,7 @@ package HomeWork11;
 
 import java.util.Objects;
 
-public class Flightless extends Birds {
+public class Flightless extends Birds  {
     private String typeOfMovement;
 
     public Flightless(String name, String livingEnvironment, String typeOfMovement) {

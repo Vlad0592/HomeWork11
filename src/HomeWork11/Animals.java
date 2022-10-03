@@ -4,7 +4,7 @@ package HomeWork11;
 
 import java.util.Objects;
 
-public abstract class Animals {
+public abstract class Animals  {
 
     private String name;
     private int age;

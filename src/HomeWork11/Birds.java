@@ -2,7 +2,7 @@ package HomeWork11;
 
 import java.util.Objects;
 
-public class Birds extends Animals {
+public class Birds extends Animals   {
     private  String livingEnvironment;
     private Flightless flightless;
     private Flying flying;
